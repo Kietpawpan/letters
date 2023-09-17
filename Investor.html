@@ -1,0 +1,151 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!Book layout>
+	<link rel="stylesheet" href="css/book.css">
+
+<title>The Art of 9 &#215 9 Go</title>
+
+<!Sequence diagram>
+	<script src="underscore-min.js"></script>
+	<script src="raphael-min.js"></script>
+	<script src="sequence-diagram-min.js"></script>
+
+<!Flow diagram>
+  <script src="js/raphael.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/flowchart-latest.js"></script>
+
+
+  </head>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="container">
+
+        <section class="open-book">
+            <header>
+
+<!Left top line>
+                	<h1>Letters from Dad Tony to his son</h1>
+
+<!Right top line>
+                	<h6>&copy; 2023 J-Tech</h6>
+		</header>
+
+            <article>
+
+<!Chapter title>
+    	<h2 class="chapter-title">Intelligent Investment</h2>
+
+<p>Dear Son,<br><br>
+
+<p>If you want to invest in common stocks, <mark class="green">learn to be an intelligent investor</mark> first. Never be a speculator. </p>
+
+<p>Before you buy the shares of any stocks in the market, make sure you are an intelligent investor, or you will be risky of loosing a lot of money from speculative investment. </p>
+<p>
+You should have read the best investment book by Ben Graham, <em>The Intelligent Investor</em>. At least, read the two chapters recommended by Warren Buffet:</p>
+<ul>
+<li>Chapter 8 The Investor and Market Flucuations</li>
+<li>Chapter 20 Margin of Safety as the Central Concept
+</ul>
+<p>Besides, you should have studied the bussiness behind that stock. It must be a good business, and its current stock price should be fair. Do not buy a fast-growing stock, nor should you buy an overly priced stock. You can check whether it is a good business with a fair stock price or not, by using the <a href="https://github.com/Kietpawpan/jTechTEXAS">jTech-TEXAS calculator</a>. Then, your should develop a simulation or mathematical model of that business, to falsify a theory of its expected long-term earning.
+</p>
+
+<p>Finally, it is crucial not to listen to anyone about which stock to buy or to sell. Believe in the findings from your own careful experiment. You will be safe and can sustain your prosperity.
+</p>
+
+<br><br>
+<dd>Love,<br><br>
+<sup style="text-align:left;color:black;">Dad Tony<br>17</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sep. 2023<br>
+
+</dd>
+<br>
+
+<div id="chart">
+
+st=>start: Start
+e=>end: End
+op1=>subroutine: Business Analysis|past:>https://github.com/Kietpawpan/jTechTEXAS[blank]
+cond=>condition: Good Business?
+c2=>condition: Fair Price?|approved
+io=>inputoutput: Watch List
+io2=>operation: No Purchase
+io3=>end: Buy
+
+
+st->io->op1->cond
+cond(no, bottom)->io2->e
+cond(yes)->c2
+c2(yes@fair)->io3
+c2(no@expensive, top)->io->op1
+
+
+</div>
+
+     
+
+
+<br>
+<dd>
+
+<br><br>
+<br>
+<br>
+
+<center>****************</center><br>
+
+
+
+            </article>
+            <footer>
+                <ol id="page-numbers">
+                    <li>3</li>
+                    <li>4</li>
+                </ol>
+            </footer>
+        </section>
+
+    </div>
+</div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/raphael.js"></script>
+
+<script>
+		$('#chart').flowChart();
+
+/* MASTER CODE FOR FLOWCHART
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End:>http://www.google.com
+op1=>subroutine: Observation|past:$myFunction
+op2=>inputoutput: Big move|current
+op3=>operation: Defensive search
+cond=>condition: Any risks?|approved:>http://www.google.com
+c2=>condition: Severe?|rejected
+io=>inputoutput: Urgent move|request
+para=>parallel: Aggressive search
+
+st->op1->cond
+cond(yes, right)->c2
+cond(no)->para
+c2(true)->op3->io->e
+c2(false)->para
+
+para(path1, left)->op1
+para(path2, bottom)->op2->e
+
+st@>op1({"stroke":"Red"})@>cond({"stroke":"Red","arrow-end":"classic-wide-long"})@>c2({"stroke":"Red"})@>io({"stroke":"Red"})@>e({"stroke":"Red"})
+
+para@>op2({"stroke-width":6})
+c2@>op3({"stroke":"Red"})@>io({"stroke":"Red", "stroke-width":6})
+
+*/
+
+		</script>
+
+</body></html>
